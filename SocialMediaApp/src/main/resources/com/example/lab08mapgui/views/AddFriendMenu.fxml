@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="452.0" prefWidth="684.0" style="-fx-background-color: #237EB5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddFriendController">
+   <children>
+      <TableView fx:id="userTableView" layoutX="273.0" layoutY="105.0" opacity="0.9" prefHeight="265.0" prefWidth="143.0" style="-fx-background-color: #845CB6; -fx-border-color: #000000;">
+         <columns>
+            <TableColumn fx:id="userColumn" prefWidth="141.99998982747397" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-border-color: #000000; -fx-font-size: 14px;" text="Username" />
+         </columns>
+      </TableView>
+      <Button layoutX="273.0" layoutY="378.0" mnemonicParsing="false" onAction="#addFriendHandler" prefHeight="36.0" prefWidth="143.0" text="Add Friend" />
+      <TextField fx:id="textFieldSearchUser" layoutX="273.0" layoutY="73.0" prefHeight="25.0" prefWidth="143.0" />
+      <Button layoutX="428.0" layoutY="73.0" mnemonicParsing="false" onAction="#searchAddFriendHandler" prefHeight="25.0" prefWidth="91.0" text="Search" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToUserProfileHandler" prefHeight="36.0" prefWidth="135.0" text="User Profile" />
+      <TableView fx:id="friendReqTableView" layoutX="40.0" layoutY="105.0" opacity="0.9" prefHeight="265.0" prefWidth="191.0" style="-fx-background-color: #845CB6; -fx-border-color: #000000;">
+        <columns>
+          <TableColumn fx:id="friendReqUserColumn" prefWidth="93.99999618530273" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-border-color: #000000; -fx-font-size: 14px;" text="Username" />
+          <TableColumn fx:id="friendReqDateColumn" prefWidth="95.33334350585938" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-border-color: #000000; -fx-font-size: 14px;" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="40.0" layoutY="378.0" mnemonicParsing="false" onAction="#unsendHandler" prefHeight="36.0" prefWidth="191.0" text="Unsend" />
+      <Label layoutX="64.0" layoutY="73.0" prefHeight="25.0" prefWidth="143.0" text="Friend requests sent" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
